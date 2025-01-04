@@ -1,0 +1,54 @@
+# User Management UI
+
+## Summary
+The User Management Screen allows administrators to manage user accounts. This includes viewing, adding, editing, and deleting user information.
+
+## Requirements
+View User List: Displays a list of all users with details.
+Add New User: Provides a form to add a new user.
+Edit User: Allow editing of existing user details.
+Delete User: Enable deletion of user accounts.
+Search and Filter: Implement search and filter functions.
+Pagination: Support pagination for user lists with many entries.
+
+## UI Components
+
+1. User List Table
+Columns: User ID, Name, Email, Role, Actions (Edit, Delete)
+	Behavior:
+		- Clicking on a user row selects the user for editing.
+  		- Each row has "Edit" and "Delete" buttons for respective actions.
+Pagination: Display pagination controls at the bottom of the table.
+
+2. Add New User Button
+Location: Top-right corner of the screen.
+Behavior: Opens a modal form for adding a new user.
+
+3. Search Bar
+Location: Above the user list table.
+Behavior: Filters the user list based on the entered search term (searches by name, email, role).
+
+4. User Form 
+Fields: Name (text), Email (text), Role (dropdown), Password (password)
+- Behavior:
+  - Appears as a modal when adding or editing a user.
+  - Validates input before submission.
+  - Closes and refreshes the user list upon successful submission.
+
+5. Confirmation Dialog
+- Behavior: Appears when deleting a user to confirm the action.
+
+##Initial State
+- User List: Display the first page of users with default sorting by User ID.
+- Search Bar: Empty, with placeholder text "Search users...".
+- Add New User Button: Enabled.
+- Edit and Delete Buttons: Enabled for each user row.
+
+##Error Handling
+- Validation Errors: Display error messages below the respective form fields.
+- API Errors: Show a toast notification for any API-related errors (e.g., network issues).
+
+##Accessibility
+- Ensure all components are accessible via keyboard navigation.
+- Use ARIA labels for screen reader support.
+
